@@ -116,7 +116,7 @@ namespace ShoppingData
         public bool Remove(LineItem item)
         {
             int index = _items.IndexOf(item);
-            if (index == -1)
+            if (index != -1)
             {
                 _items.Remove(item);
                 item.PropertyChanged -= HandleItemPropertyChanged;
